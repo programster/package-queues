@@ -1,6 +1,6 @@
 <?php
 
-namespace iRAP\AsyncQuery;
+namespace iRAP\Queues;
 
 require_once(__DIR__ . '/Settings.php');
 require_once(__DIR__ . '/Autoloader.php');

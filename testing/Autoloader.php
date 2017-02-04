@@ -9,7 +9,7 @@
  * scripts is fine.
  */
 
-namespace iRAP\AsyncQuery;
+namespace iRAP\Queues;
 
 class Autoloader
 {
@@ -108,7 +108,7 @@ class Autoloader
      */
     public static function convertClassNameToFileName($className)
     {
-        $className = str_replace('iRAP\AsyncQuery\\', "", $className);
+        $className = str_replace('iRAP\Queues\\', "", $className);
         $filename = $className . '.php';
         return $filename;
     }

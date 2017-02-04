@@ -4,7 +4,7 @@
 /* 
  * Execution script to kick off the tests.
  */
-namespace iRAP\AsyncQuery;
+namespace iRAP\Queues;
 
 require_once(__DIR__ . '/Bootstrap.php');
 

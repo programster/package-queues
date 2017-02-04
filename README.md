@@ -46,7 +46,7 @@ $asyncQuery2 = new \iRAP\AsyncQuery\AsyncQuery(
     $connectionPool2 # <-- different pool, perhaps for a different database?
 );
 
-$parallelRunnableQueue = new \iRAP\AsyncQuery\ParallelRunnableQueue($queueCallback);
+$parallelRunnableQueue = new \iRAP\Queues\ParallelRunnableQueue($queueCallback);
 
 $parallelRunnableQueue->add($asyncQuery1);
 $parallelRunnableQueue->add($asyncQuery2);
