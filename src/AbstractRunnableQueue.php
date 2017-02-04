@@ -5,7 +5,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-namespace iRAP\AsyncQuery;
+namespace iRAP\Queues;
 
 abstract class AbstractRunnableQueue implements QueueInterface
 {
@@ -24,7 +24,7 @@ abstract class AbstractRunnableQueue implements QueueInterface
     
     /**
      * Add a runnable element to the queue
-     * @param \iRAP\AsyncQuery\RunnableInterface $item
+     * @param \iRAP\Queues\RunnableInterface $item
      */
     public function add(RunnableInterface $item)
     {

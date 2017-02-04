@@ -5,7 +5,7 @@
  * the queue depletes.
  */
 
-namespace iRAP\AsyncQuery;
+namespace iRAP\Queues;
 
 class SerialRunnableQueue extends AbstractRunnableQueue
 {

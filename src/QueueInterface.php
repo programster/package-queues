@@ -1,12 +1,12 @@
 <?php
 
-namespace iRAP\AsyncQuery;
+namespace iRAP\Queues;
 
-interface QueueInterface extends \iRAP\AsyncQuery\RunnableInterface
+interface QueueInterface extends \iRAP\Queues\RunnableInterface
 {
     /**
      * Add a runnable element to the queue
-     * @param \iRAP\AsyncQuery\RunnableInterface $item
+     * @param \iRAP\Queues\RunnableInterface $item
      */
     public function add(RunnableInterface $item);
     

@@ -6,7 +6,7 @@
  * 
  */
 
-namespace iRAP\AsyncQuery;
+namespace iRAP\Queues;
 
 class ParallelRunnableQueue extends AbstractRunnableQueue
 {   

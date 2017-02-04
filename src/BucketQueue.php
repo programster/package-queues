@@ -8,7 +8,7 @@
  * add this "bucket" behaviour to any of the existing QueueInterface objects.
  */
 
-namespace iRAP\AsyncQuery;
+namespace iRAP\Queues;
 
 class BucketQueue implements QueueInterface
 {
@@ -35,7 +35,7 @@ class BucketQueue implements QueueInterface
      * If adding this item puts the queue over the threshold, then this will self-invoke.
      * This method has to use a static variable to prevent causing issues if running the queue
      * causes more tasks to be added to the queu.
-     * @param \iRAP\AsyncQuery\RunnableInterface $item
+     * @param \iRAP\Queues\RunnableInterface $item
      */
     public function add(RunnableInterface $item)
     {

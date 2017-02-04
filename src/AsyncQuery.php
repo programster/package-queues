@@ -10,7 +10,7 @@
  * 
  */
 
-namespace iRAP\AsyncQuery;
+namespace iRAP\Queues;
 
 class AsyncQuery implements RunnableInterface
 {

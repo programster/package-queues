@@ -5,7 +5,7 @@
  * collection first. E.g. the reverse order of a FIFO queue.
  */
 
-namespace iRAP\AsyncQuery;
+namespace iRAP\Queues;
 
 class RunnableStack extends AbstractRunnableQueue
 {   
