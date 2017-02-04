@@ -1,5 +1,5 @@
 # Queues
-This package was created to make it simple to create queues of tasks, such as for seding asynchronus MySQL or CURL requests.
+This package was created to make it simple to create queues of tasks, such as for seding asynchronus MySQL or [CURL requests](https://github.com/programster/curl-easier).
 
 ## Requirements
 
