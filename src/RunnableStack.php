@@ -21,7 +21,7 @@ class RunnableStack extends AbstractRunnableQueue
         {
             $runnable = array_pop($this->m_runnables);
             
-            /* @var $runnable RunnableInterface */
+            /* @var $runnable \iRAP\Interfaces\RunnableInterface */
             $processed = $runnable->run();
             
             if ($processed)

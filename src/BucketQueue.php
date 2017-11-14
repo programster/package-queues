@@ -35,9 +35,9 @@ class BucketQueue implements QueueInterface
      * If adding this item puts the queue over the threshold, then this will self-invoke.
      * This method has to use a static variable to prevent causing issues if running the queue
      * causes more tasks to be added to the queu.
-     * @param \iRAP\Queues\RunnableInterface $item
+     * @param \iRAP\Interfaces\RunnableInterface $item
      */
-    public function add(RunnableInterface $item)
+    public function add(\iRAP\Interfaces\RunnableInterface $item)
     {
         static $runningBucketLoop = false;
         $this->m_engine->add($item);

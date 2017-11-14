@@ -21,7 +21,7 @@ class ParallelRunnableQueue extends AbstractRunnableQueue
         {
             foreach ($this->m_runnables as $index => $runnable)
             {
-                /* @var $runnable RunnableInterface */
+                /* @var $runnable \iRAP\Interfaces\RunnableInterface */
                 $handled = $runnable->run();
                 
                 if ($handled)

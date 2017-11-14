@@ -2,13 +2,13 @@
 
 namespace iRAP\Queues;
 
-interface QueueInterface extends \iRAP\Queues\RunnableInterface
+interface QueueInterface extends \iRAP\Interfaces\RunnableInterface
 {
     /**
      * Add a runnable element to the queue
      * @param \iRAP\Queues\RunnableInterface $item
      */
-    public function add(RunnableInterface $item);
+    public function add(\iRAP\Interfaces\RunnableInterface $item);
     
     
     /**
