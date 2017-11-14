@@ -13,7 +13,8 @@
         }
     ],
     "require": {
-        "php": ">=5.5.0"
+        "php": ">=7.0.0",
+        "irap/interfaces": "0.1.*"
     },
     "autoload": {
         "psr-4": {
@@ -22,8 +23,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "iRAP\\Queues\\Testing": "testing/",
-            "iRAP\\Queues\\Testing\\Tests": "testing/tests"
+            "iRAP\\Queues\\Testing\\": "testing",
+            "iRAP\\Queues\\Testing\\Tests\\": "testing/tests"
         }
     }
 }
