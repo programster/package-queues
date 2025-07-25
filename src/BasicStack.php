@@ -8,7 +8,7 @@
 namespace Programster\Queues;
 
 
-class BasicQueue implements RunnableInterface
+class BasicStack implements RunnableInterface
 {
     protected array $m_runnables;
 
@@ -41,7 +41,7 @@ class BasicQueue implements RunnableInterface
         while (count($this->m_runnables) > 0)
         {
             /* @var $runnable \Programster\Queues\RunnableInterface */
-            $runnable = array_shift($this->m_runnables);
+            $runnable = array_pop($this->m_runnables);
             $runnable->run();
         }
     }
