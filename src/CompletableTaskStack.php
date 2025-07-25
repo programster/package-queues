@@ -7,29 +7,33 @@
 
 namespace Programster\Queues;
 
-class RunnableStack extends AbstractRunnableQueue
-{   
+use Programster\Runnable\Runnable;
+
+class CompletableTaskStack extends AbstractCompletableTaskQueue
+{
     /**
      * Call this method to check if the asynchronous queries have returned results, and handle
      * them if they have. If connections free up, and there are pending queries, this will 
      * send them off to the database.
      * @return boolean - true if everything has been completed, false otherwise.
      */
-    public function run()
+    public function run() : void
     {
         if ($this->count() > 0)
         {
             $runnable = array_pop($this->m_runnables);
             
-            /* @var $runnable \iRAP\Interfaces\RunnableInterface */
-            $processed = $runnable->run();
+            /* @var $runnable RunnableInterface & CompletableInterface */
+            $runnable->run();
             
-            if ($processed)
+            if ($runnable->isCompleted())
             {
                 if ($this->count() === 0 && $this->m_callback != null)
                 {
-                    $callback = $this->m_callback;
-                    $callback();
+                    if ($this->m_callback !== null)
+                    {
+                        $this->m_callback->run();
+                    }
                 }
             }
             else
@@ -37,9 +41,5 @@ class RunnableStack extends AbstractRunnableQueue
                 array_push($this->m_runnables, $runnable);
             }
         }
-        
-        # Return whether we are "handled" (empty) or not.
-        $handled = ($this->count() === 0);
-        return $handled;
     }
 }

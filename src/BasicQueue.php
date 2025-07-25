@@ -1,0 +1,53 @@
+<?php
+
+/*
+ * A very basic queue that simply takes a bunch of runnable objects and executes them when this queue is told to run,
+ * running them in the order they were added.
+ */
+
+namespace Programster\Queues;
+
+use Programster\Runnable\Runnable;
+
+class BasicQueue implements RunnableInterface
+{
+    protected array $m_runnables;
+
+
+    /**
+     * Construct a bucket queue object to manage runnable elements.
+     * @param CompletableTaskQueueInterface $queue
+     * @param int $startThreshold - max number of elements to take before self-invokation.
+     * @param int $stopThreshold - the threshold at which to stop running the queue after having been self-invoked.
+     * @param int $sleepTime - the amount of time in microseconds to sleep between re-running the queue of tasks if
+     * the queue has not met the required stopThreshold
+     */
+    public function __construct(RunnableInterface ...$items)
+    {
+        $this->m_runnables = $items;
+    }
+
+
+    /**
+     * Add a runnable element to the queue.
+     * If adding this item puts the queue over the threshold, then this will self-invoke.
+     * @param CompletableInterface&RunnableInterface $item
+     */
+    public function add(RunnableInterface $item) : void
+    {
+        $this->m_runnables[] = $item;
+    }
+    
+    
+    public function count() : int { return count($this->m_runnables); }
+
+    public function run() : void
+    {
+        while (count($this->m_runnables) > 0)
+        {
+            /* @var $runnable \Programster\Queues\RunnableInterface */
+            $runnable = array_push($this->m_runnables);
+            $runnable->run();
+        }
+    }
+}

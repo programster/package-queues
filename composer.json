@@ -19,7 +19,6 @@
     ],
     "require": {
         "php": ">=8.2.0",
-        "irap/interfaces": "0.1.*"
     },
     "autoload": {
         "psr-4": {
