@@ -8,7 +8,7 @@
  * add this "bucket" behaviour to any of the existing QueueInterface objects.
  */
 
-namespace iRAP\Queues;
+namespace Programster\Queues;
 
 class BucketQueue implements QueueInterface
 {

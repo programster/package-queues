@@ -1,6 +1,6 @@
 <?php
 
-namespace iRAP\Queues;
+namespace Programster\Queues;
 
 require_once(__DIR__ . '/Autoloader.php');
 

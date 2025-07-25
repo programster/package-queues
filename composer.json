@@ -1,11 +1,16 @@
 {
-    "name": "irap/queues",
+    "name": "programster/queues",
     "type": "library",
     "description": "Package for queueing because the British love to queue.",
     "keywords": [],
-    "homepage": "https://github.com/iRAP-software",
+    "homepage": "https://github.com/programster/package-queues",
     "license": "MIT",
     "authors": [
+        {
+            "name": "Stuart Page",
+            "email": "sdpagent@gmail.com",
+            "role": "Developer"
+        },
         {
             "name": "Stuart Page",
             "email": "stuart.page@irap.org",
@@ -13,18 +18,18 @@
         }
     ],
     "require": {
-        "php": ">=7.0.0",
+        "php": ">=8.2.0",
         "irap/interfaces": "0.1.*"
     },
     "autoload": {
         "psr-4": {
-            "iRAP\\Queues\\": "src"
+            "Programster\\Queues\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "iRAP\\Queues\\Testing\\": "testing",
-            "iRAP\\Queues\\Testing\\Tests\\": "testing/tests"
+            "Programster\\Queues\\Testing\\": "testing",
+            "Programster\\Queues\\Testing\\Tests\\": "testing/tests"
         }
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace iRAP\Queues;
+namespace Programster\Queues;
 
 interface QueueInterface extends \iRAP\Interfaces\RunnableInterface
 {

@@ -5,7 +5,7 @@
  * the queue depletes.
  */
 
-namespace iRAP\Queues;
+namespace Programster\Queues;
 
 class SerialRunnableQueue extends AbstractRunnableQueue
 {

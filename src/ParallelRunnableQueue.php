@@ -6,7 +6,7 @@
  * 
  */
 
-namespace iRAP\Queues;
+namespace Programster\Queues;
 
 class ParallelRunnableQueue extends AbstractRunnableQueue
 {   

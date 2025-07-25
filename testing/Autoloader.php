@@ -9,7 +9,7 @@
  * scripts is fine.
  */
 
-namespace iRAP\Queues;
+namespace Programster\Queues;
 
 class Autoloader
 {

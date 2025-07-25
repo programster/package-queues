@@ -4,7 +4,7 @@
  * 
  */
 
-namespace iRAP\Queues\Testing;
+namespace Programster\Queues\Testing;
 
 abstract class AbstractTest
 {

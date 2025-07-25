@@ -5,7 +5,7 @@
  * collection first. E.g. the reverse order of a FIFO queue.
  */
 
-namespace iRAP\Queues;
+namespace Programster\Queues;
 
 class RunnableStack extends AbstractRunnableQueue
 {   
