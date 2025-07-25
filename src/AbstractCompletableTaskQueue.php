@@ -2,7 +2,6 @@
 
 namespace Programster\Queues;
 
-use Programster\Runnable\Runnable;
 
 abstract class AbstractCompletableTaskQueue implements CompletableTaskQueueInterface,CompletableInterface
 {

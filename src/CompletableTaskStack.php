@@ -7,7 +7,6 @@
 
 namespace Programster\Queues;
 
-use Programster\Runnable\Runnable;
 
 class CompletableTaskStack extends AbstractCompletableTaskQueue
 {

@@ -7,7 +7,6 @@
 
 namespace Programster\Queues;
 
-use Programster\Runnable\Runnable;
 
 class BasicQueue implements RunnableInterface
 {
@@ -27,11 +26,11 @@ class BasicQueue implements RunnableInterface
     /**
      * Add a runnable element to the queue.
      * If adding this item puts the queue over the threshold, then this will self-invoke.
-     * @param CompletableInterface&RunnableInterface $item
+     * @param CompletableInterface&RunnableInterface $runnable
      */
-    public function add(RunnableInterface $item) : void
+    public function add(RunnableInterface $runnable) : void
     {
-        $this->m_runnables[] = $item;
+        $this->m_runnables[] = $runnable;
     }
     
     

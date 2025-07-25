@@ -7,7 +7,6 @@
 
 namespace Programster\Queues;
 
-use Programster\Runnable\Runnable;
 
 interface CompletableTaskQueueInterface extends RunnableInterface
 {
