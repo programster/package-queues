@@ -40,7 +40,7 @@ class BasicStack implements RunnableInterface
     {
         while (count($this->m_runnables) > 0)
         {
-            /* @var $runnable \Programster\Queues\RunnableInterface */
+            /* @var $runnable RunnableInterface */
             $runnable = array_pop($this->m_runnables);
             $runnable->run();
         }
