@@ -15,12 +15,8 @@ class BasicQueue implements RunnableInterface
 
 
     /**
-     * Construct a bucket queue object to manage runnable elements.
-     * @param CompletableTaskQueueInterface $queue
-     * @param int $startThreshold - max number of elements to take before self-invokation.
-     * @param int $stopThreshold - the threshold at which to stop running the queue after having been self-invoked.
-     * @param int $sleepTime - the amount of time in microseconds to sleep between re-running the queue of tasks if
-     * the queue has not met the required stopThreshold
+     * Create a queue of things to run.
+     * @param RunnableInterface ...$items
      */
     public function __construct(RunnableInterface ...$items)
     {
