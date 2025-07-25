@@ -15,7 +15,11 @@ This package was created to make it simple to create queues of tasks, such as fo
 ## Queue Types
 
 ### BasicQueue
-A very basic queue that takes runnable items, and calls run() on them when the queu itself is run().
+A very basic queue that takes runnable items, and calls run() on them in the order they were 
+added, when the queue itself is run().
+
+### BasicStack
+A very basic stack that takes runnable items, and calls run() on them in order of last in first out.
 
 ### CompletableTaskSerialQueue
 Run items one after each other (FIFO), waiting for each one to complete before moving onto the next.
